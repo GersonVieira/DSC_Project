@@ -6,6 +6,7 @@ import { ContribuidoresComponent } from './contribuidores/contribuidores.compone
 import { ContribuidorComponent } from './contribuidor/contribuidor.component';
 import { ComentarioComponent } from './comentario/comentario.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RodapeComponent } from './rodape/rodape.component';
     ContribuidoresComponent,
     ContribuidorComponent,
     ComentarioComponent,
-    RodapeComponent
+    RodapeComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule
