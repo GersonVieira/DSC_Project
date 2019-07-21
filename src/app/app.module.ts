@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { ContribuidoresComponent } from './contribuidores/contribuidores.component';
 import { ContribuidorComponent } from './contribuidor/contribuidor.component';
 import { ComentarioComponent } from './comentario/comentario.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContribuidoresComponent,
     ContribuidorComponent,
-    ComentarioComponent
+    ComentarioComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule
