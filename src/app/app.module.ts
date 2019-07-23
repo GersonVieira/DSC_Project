@@ -8,6 +8,8 @@ import { ComentarioComponent } from './comentario/comentario.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { FilmesComponent } from './filmes/filmes.component';
+import { LoginComponent } from './login/login.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { FilmesComponent } from './filmes/filmes.component';
     ComentarioComponent,
     RodapeComponent,
     CategoriasComponent,
-    FilmesComponent
+    FilmesComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
