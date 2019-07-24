@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Contribuidor } from './contribuidor.model';
 
 @Component({
   selector: 'app-contribuidor',
@@ -6,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contribuidor.component.css']
 })
 export class ContribuidorComponent implements OnInit {
-  nome: string;
-  link: string;
-  site: string;
+  @Input() contribuidor:Contribuidor;
   constructor() {
-    this.nome = 'Gefferson Pires';
-    this.link = 'https://www.facebook.com/gefferson.pires.3';
-    this.site = 'facebook';
+    
   }
   ngOnInit() {
   }
