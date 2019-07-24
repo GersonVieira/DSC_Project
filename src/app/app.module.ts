@@ -10,6 +10,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { FilmesComponent } from './filmes/filmes.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
+import { FilmeComponent } from './filme/filme.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { routing } from './app.routing';
     CategoriasComponent,
     FilmesComponent,
     LoginComponent,
+    FilmeComponent,
+    PrincipalComponent,
   ],
   imports: [
     BrowserModule,

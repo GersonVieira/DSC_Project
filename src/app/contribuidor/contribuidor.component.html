@@ -1,5 +1,5 @@
-<img class="ui tiny avatar image" src={{contribuidor.imagem}}>
+<img class="ui tiny avatar image" src={{contribuidor.getImagem()}}>
     <div class="content">
-    <h3 style="color: white" class="ui header">{{contribuidor.nome}}</h3>
-    <p style="color: white">{{contribuidor.about}}<a style="color: white" target="_blank" rel="noopener" href={{contribuidor.link}}><br><b> {{contribuidor.siteNome}}</b><i class="github icon"></i></a></p>
+    <h3 style="color: white" class="ui header">{{contribuidor.getNome()}}</h3>
+    <p style="color: white">{{contribuidor.getAbout()}}<a style="color: white" target="_blank" rel="noopener" href={{contribuidor.getLink()}}><br><b> {{contribuidor.getSiteNome()}}</b><i class="github icon"></i></a></p>
     </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Filme } from '../filme/filme.model';
 
 @Component({
   selector: 'app-filmes',
@@ -6,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filmes.component.css']
 })
 export class FilmesComponent implements OnInit {
-  asd:string;
+  @Input() filmes: Filme[];
   constructor() {
-    this.asd='exterminador do futuro'
-   }
+    this.filmes=[
+      new Filme('O Exterminador'),
+      new Filme('Dora Avemtireira'),
+      new Filme('Crepusculo'),
+      new Filme('Chaves'),
+      new Filme('Vingadores'),
+      new Filme('Jack'),
+      new Filme('Homem-Aranha'),
+      new Filme('Jovens Titans'),
+      new Filme('Alto da compadecida')]
+  }
 
+  getFilmes(): Filme[]{
+    return this.filmes;
+  }
   ngOnInit() {
   }
 
