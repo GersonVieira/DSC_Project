@@ -1,25 +1,18 @@
 
+
+
 <div style="background-color: cornflowerblue">
   <div style="background-color: cornflowerblue" class="ui top fixed menu">
     <div class="item">
       <img src="../favicon.ico">
     </div>
-    <a class="item">Home</a>
-    <a class="item">Sign-in</a>
-    <!-- Barra de busca \/ -->
-    <div class="ui action input">
-      <input type="text" placeholder="Busca" [ngModel] = 'busca'>
-      <select class="ui compact selection dropdown" >
-        <option selected="" value="filmes">Filmes</option>
-        <option value="usuarios">Usuários</option>
-      </select>
-      <div class="ui button">Buscar</div>
-    </div>
+    <a [routerLink]="['']" class="item">Home</a>
+    <a [routerLink]="['login']" class="item">Sign-in</a>
   </div>
   <div class="ui menu" style="margin-top:1.5cm">
     <div class="ui container">
       <div class="ui item borderless">
-          <h1 class="ui header">{{getHeader()}}</h1>
+          <h1 class="ui header">Filmes</h1>
       </div>
     </div>
   </div>
@@ -29,4 +22,4 @@
 
 </div>
   <app-rodape></app-rodape>
-</div>
+  </div>

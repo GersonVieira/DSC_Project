@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Filme } from '../filme/filme.model';
-import { AppComponent } from '../app.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-filmes',
@@ -10,18 +8,8 @@ import { AppComponent } from '../app.component';
 export class FilmesComponent implements OnInit {
   asd:string;
   constructor() {
-    AppComponent.setHeader('Filmes')
-    this.filmes=[
-      new Filme('O Exterminador'),
-      new Filme('Dora Avemtireira'),
-      new Filme('Crepusculo'),
-      new Filme('Chaves'),
-      new Filme('Vingadores'),
-      new Filme('Jack'),
-      new Filme('Homem-Aranha'),
-      new Filme('Jovens Titans'),
-      new Filme('Alto da compadecida')]
-  }
+    this.asd='exterminador do futuro'
+   }
 
   ngOnInit() {
   }
