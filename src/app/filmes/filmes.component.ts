@@ -8,7 +8,7 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./filmes.component.css']
 })
 export class FilmesComponent implements OnInit {
-  @Input() filmes: Filme[];
+  asd:string;
   constructor() {
     AppComponent.setHeader('Filmes')
     this.filmes=[
@@ -23,9 +23,6 @@ export class FilmesComponent implements OnInit {
       new Filme('Alto da compadecida')]
   }
 
-  getFilmes(): Filme[]{
-    return this.filmes;
-  }
   ngOnInit() {
   }
 

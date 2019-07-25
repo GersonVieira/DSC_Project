@@ -7,10 +7,12 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { 
+  nome = '';
+  senha = '';
+  constructor() {
     AppComponent.setHeader('Login')
-  }
+   }
+
 
   ngOnInit() {
   }

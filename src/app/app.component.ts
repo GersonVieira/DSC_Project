@@ -13,4 +13,7 @@ export class AppComponent {
   getHeader():string{
     return localStorage.getItem('header')
   }
+  title = 'Projeto DSC';
+  busca;
+  tipoDeBusca;
 }

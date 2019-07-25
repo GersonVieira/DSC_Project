@@ -9,7 +9,7 @@ import { Contribuidor } from './contribuidor.model';
 export class ContribuidorComponent implements OnInit {
   @Input() contribuidor:Contribuidor;
   constructor() {
-    
+
   }
   ngOnInit() {
   }

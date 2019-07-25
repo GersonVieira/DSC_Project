@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ContribuidoresComponent } from './contribuidores/contribuidores.component';
@@ -14,6 +15,7 @@ import { FilmeComponent } from './filme/filme.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +31,12 @@ import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
     PrincipalComponent,
     PerfilComponent,
     EditPerfilComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
