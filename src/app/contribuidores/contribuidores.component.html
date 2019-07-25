@@ -1,7 +1,9 @@
 <div class="ui main text container">
-        <div class="ui horizontal list">
-            <div class="item" *ngFor="let contribuidor of getContribuidores()">
-                <app-contribuidor [contribuidor]='contribuidor'></app-contribuidor>
-            </div>
+        
+    <div class="item" *ngFor="let contribuidor of getContribuidores()">
+        <div class="container">
+        <app-contribuidor [contribuidor]='contribuidor'></app-contribuidor>
         </div>
     </div>
+
+</div>
