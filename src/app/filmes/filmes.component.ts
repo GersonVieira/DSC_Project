@@ -9,6 +9,7 @@ import { Filme } from '../filme/filme.model';
 export class FilmesComponent implements OnInit {
   @Input() filmes: Filme[];
   constructor() {
+    AppComponent.setHeader('Filmes')
     this.filmes=[
       new Filme('O Exterminador'),
       new Filme('Dora Avemtireira'),

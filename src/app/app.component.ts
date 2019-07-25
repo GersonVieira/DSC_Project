@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Projeto DSC';
+ 
+  static setHeader(header:string):void{
+    localStorage.setItem('header',header);
+  }
+  getHeader():string{
+    return localStorage.getItem('header')
+  }
 }

@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { FilmeComponent } from './filme/filme.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PrincipalComponent } from './principal/principal.component';
     LoginComponent,
     FilmeComponent,
     PrincipalComponent,
+    PerfilComponent,
+    EditPerfilComponent,
   ],
   imports: [
     BrowserModule,
