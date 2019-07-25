@@ -8,8 +8,8 @@
     <a class="item">Sign-in</a>
     <!-- Barra de busca \/ -->
     <div class="ui action input">
-      <input type="text" placeholder="Busca">
-      <select class="ui compact selection dropdown">
+      <input type="text" placeholder="Busca" [ngModel] = 'busca'>
+      <select class="ui compact selection dropdown" >
         <option selected="" value="filmes">Filmes</option>
         <option value="usuarios">Usuários</option>
       </select>
