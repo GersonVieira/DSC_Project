@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Filme } from '../filme/filme.model';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-filmes',

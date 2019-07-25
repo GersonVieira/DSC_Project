@@ -8,7 +8,9 @@ import { AppComponent } from '../app.component';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    AppComponent.setHeader('Login')
+  }
 
   ngOnInit() {
   }
