@@ -1,0 +1,33 @@
+<div class="ui segment">
+        <div class="container">
+                <div class="item"><img class="ui small avatar image" src='https://avatars0.githubusercontent.com/u/45407112?s=400&v=4'>   
+                <input class="ui input" type="file" accept=".jpg ">
+                </div>
+        </div>
+    <div class="ui form">
+        <div>
+          <input type="text" placeholder="Nome">
+        </div>
+        <div class="ui inverted divider"></div>
+        <div>
+                <input type="text" placeholder="Descrição">
+           </div>
+        <div class="ui inverted divider"></div>
+        <div>
+             <input type="text" placeholder="E-mail">
+        </div>
+        <div class="ui inverted divider"></div>
+        <div *ngIf='isMostrarMensagemErro()==false' class="ui positive message">
+                <i class="close icon" (click)='mudarMensagemErro'></i>
+                <div class="header">
+                  You are eligible for a reward
+                </div>
+                <p>Go to your <b>special offers</b> page to see now.</p>
+              </div>
+        <button class="ui right button" (click)='mudarMensagemErro'>Salvar</button>
+    </div>
+</div>
+    
+        <form>
+                <button class="ui button" routerLink='..'>Voltar</button>          
+        </form>

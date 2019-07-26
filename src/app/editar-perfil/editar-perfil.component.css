@@ -1,0 +1,22 @@
+.ui.segment{
+    background-color: cornflowerblue;
+    margin-top: 0cm;
+    margin-left: 4cm;
+    margin-right: 4cm;
+    border-color: cornflowerblue
+}
+form{
+    margin-bottom: 0.5cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.item{
+    margin-bottom: 0.5cm
+}
+.ui.positive.message{
+    margin-left: 4cm;
+    margin-right: 4cm;
+    margin-bottom: 0.5cm
+}

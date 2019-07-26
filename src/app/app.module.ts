@@ -12,8 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
-import { UsuarioComponent } from './usuario/usuario.component';
 import { TelaDetalheComponent } from './tela-detalhe/tela-detalhe.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { TelaDetalheComponent } from './tela-detalhe/tela-detalhe.component';
     FilmesComponent,
     LoginComponent,
     CadastroComponent,
-    UsuarioComponent,
     TelaDetalheComponent,
+    PerfilComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,

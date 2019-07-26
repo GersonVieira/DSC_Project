@@ -1,5 +1,15 @@
-
-h3{
+p{
+    margin-bottom: 0cm
+}
+.container{
+    margin-top: 1cm;
+    display: table
+}
+.ui.tiny.button{
+    padding: 0.15cm;
+    margin: 0cm
+}
+h1{
     float: right;
     margin-top: 0.5em
 
