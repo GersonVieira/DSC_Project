@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
+  nome = '';
+  sobrenome = '';
+  email = '';
+  senha = '';
+  confirmasenha = '';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  valido() {
+
+    return true;
   }
 
 }

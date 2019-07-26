@@ -1,30 +1,41 @@
-<p>
-  cadastro works!
-</p>
+
 
 <div class="ui main text container">
   <form class="ui form">
+    <h4 class="ui dividing header">Cadastro</h4>
     <div class="field">
       <label>Nome</label>
-      <input type="text" name="Nome" placeholder="Nome" [ngModel]="nome">
-    </div>
-    <div class="field">
-      <label>Sobrenome</label>
-      <input type="text" name="sobrenome" placeholder="Sobrenome" [ngModel]="sobrenome">
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="Nome" placeholder="Nome" [ngModel]="nome">
+        </div>
+        <div class="field">
+          <input type="text" name="sobrenome" placeholder="Sobrenome" [ngModel]="sobrenome">
+        </div>
+      </div>
     </div>
     <div class="field">
       <label>E-mail</label>
-      <input type="text" name="email" placeholder="E-mail" [ngModel]="email">
+      <input type="email" name="email" placeholder="E-mail" [ngModel]="email">
     </div>
     <div class="field">
-      <label>Senha</label>
-      <input type="text" name="senha" placeholder="Senha" [ngModel]="senha">
-    </div>
-    <div class="field">
-      <label>Confirmar senha</label>
-      <input type="text" name="re-senha" placeholder="Confirmar senha" [ngModel]="resenha">
-    </div>
-
-    <button class="ui button" type="submit">Cadastrar</button>
+        <label>Senha</label>
+        <div class="two fields">
+          <div class="field">
+            <input type="password" name="senha" placeholder="Senha" [ngModel]="senha">
+          </div>
+          <div class="field">
+            <input type="password" name="confirmasenha" placeholder="Confirmar senha" [ngModel]="confirmasenha">
+          </div>
+        </div>
+      </div>
+    <ng-template [ngIf] = "valido()">
+      <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header">Erro</div>
+        <p>Tenha certeza que todos os campos estão preenchidos de maneira correta.</p>
+      </div>
+    </ng-template>
+    <button class="ui button" onclick="validar()" type="submit">Cadastrar</button>
   </form>
 </div>
