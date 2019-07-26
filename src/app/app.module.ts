@@ -11,6 +11,7 @@ import { FilmesComponent } from './filmes/filmes.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

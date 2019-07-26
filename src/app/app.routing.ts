@@ -8,7 +8,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 
 const APP_ROUTE: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', component: FilmesComponent }
+  { path: '', component: FilmesComponent },
   { path: 'cadastro', component: CadastroComponent }
 ];
 
