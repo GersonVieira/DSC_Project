@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
+import { TelaDetalheComponent } from './tela-detalhe/tela-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     FilmesComponent,
     LoginComponent,
     CadastroComponent,
+    TelaDetalheComponent,
   ],
   imports: [
     BrowserModule,
