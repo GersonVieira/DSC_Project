@@ -13,6 +13,7 @@ import { routing } from './app.routing';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { TelaDetalheComponent } from './tela-detalhe/tela-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
     LoginComponent,
     CadastroComponent,
     UsuarioComponent,
+    TelaDetalheComponent,
   ],
   imports: [
     BrowserModule,
