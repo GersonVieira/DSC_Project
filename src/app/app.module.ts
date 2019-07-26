@@ -10,6 +10,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { FilmesComponent } from './filmes/filmes.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { routing } from './app.routing';
     CategoriasComponent,
     FilmesComponent,
     LoginComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
