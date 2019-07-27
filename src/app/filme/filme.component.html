@@ -1,0 +1,12 @@
+<a [routerLink]="['/detalhefilm', filme.getId()]" >
+    <div class="item">
+<div title= {{filme.getNome()}} class="ui card">
+    <div class="image">
+        <img src={{filme.getImagem()}}>
+    </div>
+    <div style="overflow:hidden;padding: 0.2cm" class="content">
+        {{filme.getNome()}}
+    </div>
+    </div>
+    </div>
+</a>

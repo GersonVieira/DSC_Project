@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Contribuidor } from '../contribuidor/contribuidor.model';
 
+
 @Component({
   selector: 'app-contribuidores',
   templateUrl: './contribuidores.component.html',
