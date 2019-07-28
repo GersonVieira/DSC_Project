@@ -19,6 +19,8 @@ import { FilmeComponent } from './filme/filme.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
     FilmeComponent,
     PrincipalComponent,
     DetalheFilmeComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CabecalhoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
