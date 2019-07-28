@@ -18,6 +18,7 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { FilmeComponent } from './filme/filme.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
     EditarPerfilComponent,
     FilmeComponent,
     PrincipalComponent,
-    DetalheFilmeComponent
+    DetalheFilmeComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
