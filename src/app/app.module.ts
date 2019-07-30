@@ -23,6 +23,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MenuComponent } from './menu/menu.component';
 import { FilmesService} from './services/filmes.service'
 import { UsuarioService } from './services/usuario.service';
+import { SeguidoresComponent } from './seguidores/seguidores.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { UsuarioService } from './services/usuario.service';
     DetalheFilmeComponent,
     CategoriaComponent,
     CabecalhoComponent,
-    MenuComponent
+    MenuComponent,
+    SeguidoresComponent
   ],
   imports: [
     BrowserModule,
