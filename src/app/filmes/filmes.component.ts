@@ -10,8 +10,8 @@ export class FilmesComponent implements OnInit {
   filmes:Filme[];
   constructor() {
     this.filmes=[
-      new Filme('O Exterminador','https://www.heroisdateve.com.br/wp-content/uploads/2017/08/DG-edWZVoAASLQN.jpg',1),
-      new Filme('Dora Avemtireira','https://static3.tcdn.com.br/img/editor/up/408990/doraaventureiraemacacobotas.png',2),
+      new Filme('O Exterminador','https://saga.art.br//wp-content/uploads/2016/09/Pacote-de-Vetores-da-Turma-do-Chaves-Corel-Draw-03-500x600.jpg',1),
+      new Filme('Dora Avemtireira','http://post-press.com/wp-content/uploads/250x300.gif',2),
       new Filme('Crepusculo','https://upload.wikimedia.org/wikipedia/pt/thumb/c/c1/Twilight_Poster.jpg/250px-Twilight_Poster.jpg',3),
       new Filme('Chaves','https://f.i.uol.com.br/fotografia/2018/01/30/15173364995a70b7b394851_1517336499_3x2_md.jpg',4),
       new Filme('Vingadores','https://conteudo.imguol.com.br/c/entretenimento/90/2019/04/23/poster-brasileiro-de-vingadores-ultimato-1556045801213_v2_1225x1800.jpg',5),

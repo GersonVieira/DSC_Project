@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Filme } from './filme';
-import { Router } from '@angular/router';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-filme',
@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./filme.component.css']
 })
 export class FilmeComponent implements OnInit {
-@Input() @Output() filme:Filme;
-router:Router;
-
-  constructor() { }
-  detalhe(){
-    this.router.navigate(['/detalhefilm', this.filme.getId()],{queryParams: this.filme})
+@Input() filme:Filme;
+  filmes:Filme[];
+  constructor( protected service:FilmesService) { 
+    this.filmes=service.getFilmes();
+  }
+  setIndex(index:number):void{
+    this.service.setIndex(index)
+  }
+  getIndex():number{
+    return this.service.getIndex();
   }
   ngOnInit() {
   }

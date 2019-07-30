@@ -6,22 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editar-perfil.component.css']
 })
 export class EditarPerfilComponent implements OnInit {
-  mostrarMensagemErro:boolean
+  mostrarMensagemSalvo:boolean
   constructor() { 
-    this.mostrarMensagemErro=false;
+    this.mostrarMensagemSalvo=false;
   }
 
   ngOnInit() {
   }
   isMostrarMensagem():boolean{
-    return this.mostrarMensagemErro;
+    return this.mostrarMensagemSalvo;
   }
-  mudarMensagemErro():void{
-    if(this.mostrarMensagemErro==true){
-      this.mostrarMensagemErro=false;
-    }else{
-       this.mostrarMensagemErro=true;
-    }
+  mostrarMensagem():void{
+    this.mostrarMensagemSalvo=true;
+  }
+  tirarMensagem():void{
+    this.mostrarMensagemSalvo=false;
   }
 
 }

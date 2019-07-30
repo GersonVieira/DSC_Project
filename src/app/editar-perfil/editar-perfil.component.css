@@ -20,3 +20,16 @@ form{
     margin-right: 4cm;
     margin-bottom: 0.5cm
 }
+.container{
+    margin-bottom: 0.5cm;
+    align-items: center;
+    justify-content: center;
+
+}
+img{
+    margin-left: 2cm
+}
+.ui.right.floated.button{
+    margin-top: 0.5cm
+    
+}

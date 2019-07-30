@@ -1,0 +1,26 @@
+.ui.comments{
+    float: right;
+}
+.ui.card{
+    margin-top: 1cm;
+    float: none;
+    height: 12.5cm;
+    width: 7cm
+}
+.ui.container{
+    display: table;
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.extra.content{
+    padding: 0cm
+}

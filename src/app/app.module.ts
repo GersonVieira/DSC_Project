@@ -21,6 +21,7 @@ import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MenuComponent } from './menu/menu.component';
+import { FilmesService} from './services/filmes.service'
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { MenuComponent } from './menu/menu.component';
     routing,
     FormsModule
   ],
-  providers: [],
+  providers: [FilmesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
