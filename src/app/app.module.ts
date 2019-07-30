@@ -22,6 +22,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MenuComponent } from './menu/menu.component';
 import { FilmesService} from './services/filmes.service'
+import { UsuarioService } from './services/usuario.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { FilmesService} from './services/filmes.service'
     routing,
     FormsModule
   ],
-  providers: [FilmesService],
+  providers: [FilmesService,UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
