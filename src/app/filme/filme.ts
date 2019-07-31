@@ -1,8 +1,6 @@
-import { Router } from '@angular/router';
 import { Categoria } from '../models/categoria';
 
 export class Filme {
-    private router: Router;
     constructor(private nome: string,private sinopse: string, private categorias:Categoria[],private imagem: string, private id: number ){
         
     }

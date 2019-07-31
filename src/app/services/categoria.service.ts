@@ -15,7 +15,7 @@ export class CategoriaService{
         new Categoria("Drama"),
         new Categoria("Especiais"),
         new Categoria("Romance"),
-        new Categoria("Suspence"),
+        new Categoria("Suspense"),
         new Categoria("Terror") ];
     mudarCorBotao(indexBotao:number):void{
         if(this.indexBotaoClick<0){

@@ -22,7 +22,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MenuComponent } from './menu/menu.component';
 import { FilmesService} from './services/filmes.service'
-import { UsuarioService } from './services/usuario.service';
+import { UsuariosService } from './services/usuarios.service';
 import { SeguidoresComponent } from './seguidores/seguidores.component';
 import { CategoriaService } from './services/categoria.service';
 
@@ -53,7 +53,7 @@ import { CategoriaService } from './services/categoria.service';
     routing,
     FormsModule
   ],
-  providers: [FilmesService,UsuarioService,CategoriaService],
+  providers: [FilmesService,UsuariosService,CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
