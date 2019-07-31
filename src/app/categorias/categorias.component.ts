@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../models/categoria';
+import { CategoriaService } from '../services/categoria.service';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-categorias',
@@ -7,40 +9,27 @@ import { Categoria } from '../models/categoria';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit {
-  corBotoes:string[];
-  indexBotaoClick:number;
-  categorias: Categoria[];
-  constructor() { 
-    this.corBotoes=['','','','','','','','','','',''];
-    this.indexBotaoClick=-1;
-    this.categorias= [
-      new Categoria("Todos"),
-      new Categoria("Ação"),
-      new Categoria("Animação"),
-      new Categoria("Aventura"),
-      new Categoria("Clássico"),
-      new Categoria("Comédia"),
-      new Categoria("Drama"),
-      new Categoria("Especiais"),
-      new Categoria("Romance"),
-      new Categoria("Suspence"),
-      new Categoria("Terror")
-    ];
+  
+  
+  constructor(protected service:CategoriaService,protected service2:FilmesService) { 
+    
   }
   mudarCorBotao(indexBotao:number):void{
-    if(this.indexBotaoClick<0){
-      this.corBotoes[indexBotao]='blue'
-      this.indexBotaoClick=indexBotao;
-
-    }else{
-      this.corBotoes[this.indexBotaoClick]='';
-      this.indexBotaoClick=indexBotao;
-      this.corBotoes[indexBotao]='blue';
-    }
+    this.service.mudarCorBotao(indexBotao)
   }
 
   getCategorias(): Categoria[]{
-    return this.categorias;
+    return this.service.getCategorias();
+  }
+
+  getCorBotao(index:number):string{
+    
+    return this.service.getCorBotao(index);
+    
+    
+  }
+  setCategoriaEscolhida(categoria:string):void{
+    this.service2.setCategoriaDefaut(categoria);
   }
 
   ngOnInit() {

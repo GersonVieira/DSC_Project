@@ -5,6 +5,8 @@ import { Categoria } from '../models/categoria';
 @Injectable()
 export class FilmesService {
     index:number = -1;
+    categoriaDefalt:string="Todos";
+    list:Array<Filme>=[]
     filmes:Filme[] = [
             new Filme("O REI LEÃO",
             "Simba (Donald Glover) é um jovem leão cujo destino é se tornar o rei da selva. Entretanto, uma armadilha elaborada por seu tio Scar (Chiwetel Ejiofor) faz com que Mufasa (James Earl Jones), o atual rei, morra ao tentar salvar o filhote. Consumido pela culpa, Simba deixa o reino rumo a um local distante, onde encontra amigos que o ensinam a mais uma vez ter prazer pela vida.",
@@ -59,7 +61,27 @@ export class FilmesService {
         return this.filmes[this.getIndex()].getNome();
     }
     getFilmeAtual():Filme{
-        return this.filmes[this.index-1]
+        return this.filmes[this.index]
     }
-
+    getFilmesPorCategoria():Filme[]{
+        this.list=[];
+        this.categoriaDefalt=this.categoriaDefalt;
+        if(this.categoriaDefalt=="Todos"){
+            return this.filmes;
+        }
+        let array=this.filmes;
+        for(let item of array){
+            let catego=item.getCategorias();
+            for(let item2 of catego){
+                if(item2.getNome()==this.categoriaDefalt){
+                    this.list.push(item);
+                    break;
+                }
+            }
+        }
+        return this.list;
+    }
+    setCategoriaDefaut(categoria:string):void{
+        this.categoriaDefalt=categoria;
+    }
 }

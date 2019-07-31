@@ -1,6 +1,7 @@
 
 <div class="ui twelve fluid buttons" >
-    <button class="ui {{corBotoes[num]}} button" (click)='mudarCorBotao(num)' *ngFor="let categoria of getCategorias(); let num= index">{{categoria.getNome()}}</button>
+    <button class="ui {{getCorBotao(num)}} button" (click)='mudarCorBotao(num);setCategoriaEscolhida(categoria.getNome())' *ngFor="let categoria of getCategorias(); let num= index">{{categoria.getNome()}}</button>
+    
 </div>
 
 

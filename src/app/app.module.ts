@@ -24,6 +24,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FilmesService} from './services/filmes.service'
 import { UsuarioService } from './services/usuario.service';
 import { SeguidoresComponent } from './seguidores/seguidores.component';
+import { CategoriaService } from './services/categoria.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { SeguidoresComponent } from './seguidores/seguidores.component';
     routing,
     FormsModule
   ],
-  providers: [FilmesService,UsuarioService],
+  providers: [FilmesService,UsuarioService,CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

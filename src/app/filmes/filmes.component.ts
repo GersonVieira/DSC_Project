@@ -9,12 +9,16 @@ import { FilmesService } from '../services/filmes.service';
 })
 export class FilmesComponent implements OnInit {
   filmes:Filme[];
-  constructor(service: FilmesService) {
+  constructor(protected service: FilmesService) {
     this.filmes = service.getFilmes();
   }
   getFilmes(): Filme[]{
     return this.filmes;
   }
+  getFilmesPorCategoria():Filme[]{
+    return this.service.getFilmesPorCategoria();
+  }
+  
 
   ngOnInit() {
   }
