@@ -1,9 +1,7 @@
 .ui.segment{
-    background-color: cornflowerblue;
-    margin-top: 0cm;
-    margin-left: 4cm;
-    margin-right: 4cm;
-    border-color: cornflowerblue
+    background-color:whitesmoke;
+    margin-top: 0.5cm;
+    border-color: cornflowerblue;
 }
 form{
     margin-bottom: 0.5cm;
@@ -27,9 +25,12 @@ form{
 
 }
 img{
-    margin-left: 2cm
+    margin-left: 6cm
 }
 .ui.right.floated.button{
     margin-top: 0.5cm
     
+}
+.ui.input{
+    margin-left: 4cm
 }

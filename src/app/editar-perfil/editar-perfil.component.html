@@ -1,10 +1,18 @@
+<div class="ui main text container">
 <div class="ui segment">
         <form>
         <div class="container">
-                <div class="item"><img class="ui small avatar image" src='https://avatars0.githubusercontent.com/u/45407112?s=400&v=4'>   
+                <div class="item"><img class="ui small avatar image" src='{{getImage()}}'>   
                 
                 </div>
-                <input class="ui input" type="file" accept=".jpg ">
+                <div class="ui input">
+                                <div class="ui right pointing label">
+                                                URL foto
+                                              </div>
+                        <input #valor  type="text" >
+                        <button class="ui button" (click)='setImage(valor.value)'>Visualizar</button>
+                </div>
+                
         </div>
         </form>
         
@@ -39,3 +47,4 @@
         <form>
                 <button class="ui button" routerLink="..">Voltar</button>          
         </form>
+</div>
