@@ -1,19 +1,15 @@
 <div class="container">
 <div class="item ui stackable two column grid">
   <div class="column">
-  <img class="ui small avatar image" src='https://avatars0.githubusercontent.com/u/45407112?s=400&v=4'>
-    <h1 style="color: white">Gerson Vieira
-        <p style="color: white">LCC
-            <a style="color: white" target="_blank" rel="noopener" href='htttp://ww.github.com/gersonvieira'><br>
-                <b>GitHub</b>
-                <i class="github icon"></i>
-            </a>
-        </p>
-    </h1>
-  </div>
-    <div class="column">
-      <button class="ui tiny button" routerLink="editar">Editar Perfil</button>
-      <button [routerLink]="['../seguidores']" class="ui tiny button">Seguidores</button>
+  <img class="ui small avatar image" src={{user.getImagem()}}>
+    <h1 style="color: white">{{user.getNome()}}
+    <p></p>
+    <button class="ui tiny button" routerLink="editar">Editar Perfil</button>
+    <button [routerLink]="['../seguidores']" class="ui tiny button">Seguidores</button></h1>
     </div>
+    <div class="item" *ngFor="let filme of favoritos">
+      <app-filme [filme]='filme'></app-filme>
+    </div>
+    
 </div>
 </div>

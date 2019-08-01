@@ -7,17 +7,18 @@ p{
 }
 .ui.tiny.button{
     padding: 0.15cm;
-    margin: 0cm
+    margin: 0cm;
+    margin-right: 1cm;
 }
 h1{
     float: right;
-    margin-top: 0.5em
+    margin-top: 0.5cm;
 
 }
 .item{
     float: left;
     margin-bottom: 0.5cm;
-    margin-left: 0.5cm
+    margin-left: 0cm;
 }
 p{
     font-size: 80%

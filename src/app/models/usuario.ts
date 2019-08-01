@@ -7,7 +7,8 @@ export class Usuario{
         private senha: string,
         private favoritos: number[],
         private idSeguidores: number[],
-        private idSeguindo: number[]){}
+        private idSeguindo: number[],
+        private imagem: string){}
 
     getIdUsuario(): number{
         return this.idUsuario;
@@ -65,6 +66,12 @@ export class Usuario{
                 break;
             }
         }
+    }
+    getImagem(): string{
+        return this.imagem;
+    }
+    setImagem(novaImagem: string){
+        this.imagem = novaImagem;
     }
 
 }

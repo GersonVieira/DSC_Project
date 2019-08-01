@@ -93,4 +93,14 @@ export class FilmesService {
     setCategoriaDefaut(categoria:string):void{
         this.categoriaDefalt=categoria;
     }
+    getFavoritos(idFilmes:number[]): Filme[]{
+        let array = [];
+        for(let filme of this.filmes){
+            for(let id of idFilmes)
+                if (filme.getId()==id) {
+                    array.push(filme);
+                }
+        }
+        return array;
+    }
 }
