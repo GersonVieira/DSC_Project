@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FilmesService } from '../services/filmes.service';
 import { ActivatedRoute } from '@angular/router';
 import { Filme } from '../filme/filme';
+import { ComentariosService } from '../services/comentarios.service'
+import { Comentarios } from '../models/comentarios';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-detalhe-filme',
@@ -13,7 +16,7 @@ export class DetalheFilmeComponent implements OnInit {
   id:string;
   index:number=0;
   relacionados:string[]=['https://saga.art.br//wp-content/uploads/2016/09/Pacote-de-Vetores-da-Turma-do-Chaves-Corel-Draw-03-500x600.jpg','http://post-press.com/wp-content/uploads/250x300.gif','https://upload.wikimedia.org/wikipedia/pt/thumb/c/c1/Twilight_Poster.jpg/250px-Twilight_Poster.jpg']
-  constructor(protected service: FilmesService,private router:ActivatedRoute) {
+  constructor(protected service: FilmesService,private router:ActivatedRoute, protected service2:ComentariosService ) {
         this.id=router.snapshot.params['id'];
         this.setIndex();
         this.filme=this.getFilme();
@@ -43,6 +46,13 @@ export class DetalheFilmeComponent implements OnInit {
   }
   getRecomendado2():string{
     return this.relacionados[this.index+1]
+  }
+  getComentarios():Array<Comentarios>{
+    return this.service2.getComentarios(Number(this.id));
+  }
+  asd:number[]
+  setComentario(texto:string){
+    this.service2.getComentarios(Number(this.service.getIndex())).push(new Comentarios(texto,new User("gerson","vieira","https://avatars0.githubusercontent.com/u/45407112?s=400&v=4","LCC",this.asd,this.asd,"123","123")))
   }
 
 

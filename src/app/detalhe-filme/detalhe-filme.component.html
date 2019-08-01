@@ -1,39 +1,6 @@
 <div class="ui container">
     <div class="row">
         <div class="column">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-              
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <img src="https://resultadosdigitais.com.br/blog/files/2017/06/banco-wikimedia-commons.jpg" alt="Los Angeles">
-                  </div>
-              
-                  <div class="item">
-                    <img src="https://resultadosdigitais.com.br/blog/files/2017/06/banco-wikimedia-commons.jpg" alt="Chicago">
-                  </div>
-              
-                  <div class="item">
-                    <img src="https://resultadosdigitais.com.br/blog/files/2017/06/banco-wikimedia-commons.jpg" alt="New York">
-                  </div>
-                </div>
-              
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
             <div class="ui card">
                 <div class="extra content">
                     <div class="ui two buttons">
@@ -45,175 +12,67 @@
                     <img src="{{getImagemFilme()}}">  
                 </div>
                 <div class="content">
-                  <a class="header">Soraka</a>
-                  <div class="meta">
-                    <span class="date">Joined in 2013</span>
-                  </div>
-                  <div class="description">
-                    Kristy is an art director living in New York.
-                  </div>
+                  <a class="header">{{getNomeFilme()}}</a>
                 </div>
-                <div class="extra content">
-                  <a>
-                    <i class="user icon"></i>
-                    22 Friends
-                  </a>
-                </div>
+                
               </div>
 
-              <div class="ui card">
-                  <div class="extra content">
-                      <div class="ui two buttons">
-                        <div class="ui button">Favoritar</div>
-                        <div class="ui button">Decline</div>
-                      </div>
-                    </div>
-                  <div class="image">
-                      <img src="{{getRecomendado1()}}">  
-                  </div>
-                  <div class="content">
-                    <a class="header">Soraka</a>
-                    <div class="meta">
-                      <span class="date">Joined in 2013</span>
-                    </div>
-                    <div class="description">
-                      Kristy is an art director living in New York.
-                    </div>
-                  </div>
-                  <div class="extra content">
-                    <a>
-                      <i class="user icon"></i>
-                      22 Friends
-                    </a>
-                  </div>
-                </div>
         </div>
         <div class="column">
             <div class="ui comments">
                 <h3 class="ui dividing header">Comments</h3>
-                <div class="comment">
+                <div *ngFor="let comentario of getComentarios()" class="comment">
                   <a class="avatar">
-                    <img src="https://avatars0.githubusercontent.com/u/45407112?s=400&v=4">
+                    <img src={{comentario.getImagem()}}>
                   </a>
                   <div class="content">
-                    <a class="author">Matt</a>
+                    <a class="author">{{comentario.getNome()}}</a>
                     <div class="metadata">
-                      <span class="date">Today at 5:42PM</span>
+                      <span class="date">{{comentario.getHora()}}</span>
                     </div>
                     <div class="text">
-                      How artistic!
-                    </div>
-                    <div class="actions">
-                      <a class="reply">Reply</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment">
-                  <a class="avatar">
-                    <img src="https://avatars0.githubusercontent.com/u/45407112?s=400&v=4">
-                  </a>
-                  <div class="content">
-                    <a class="author">Elliot Fu</a>
-                    <div class="metadata">
-                      <span class="date">Yesterday at 12:30AM</span>
-                    </div>
-                    <div class="text">
-                      <p>This has been very useful for my research. Thanks as well!</p>
+                      {{comentario.getTexto()}}
                     </div>
                     <div class="actions">
                       <a class="reply">Reply</a>
                     </div>
                   </div>
                   <div class="comments">
-                    <div class="comment">
-                      <a class="avatar">
-                        <img src="https://avatars0.githubusercontent.com/u/45407112?s=400&v=4">
-                      </a>
-                      <div class="content">
-                        <a class="author">Jenny Hess</a>
-                        <div class="metadata">
-                          <span class="date">Just now</span>
-                        </div>
-                        <div class="text">
-                          Elliot you are always so right :)
-                        </div>
-                        <div class="actions">
-                          <a class="reply">Reply</a>
+                      <div *ngFor="let resposta of comentario.getComentarios()" class="comment">
+                        <a class="avatar">
+                          <img src={{resposta.getImagem()}}>
+                        </a>
+                        <div class="content">
+                          <a class="author">{{resposta.getNome()}}</a>
+                          <div class="metadata">
+                            <span class="date">{{resposta.getData()}}</span>
+                          </div>
+                          <div class="text">
+                            {{resposta.getTexto()}}
+                          </div>
+                          <div class="actions">
+                            <a class="reply">Reply</a>
+                          </div>
                         </div>
                       </div>
+                      
                     </div>
-                  </div>
                 </div>
-                <div class="comment">
-                  <a class="avatar">
-                    <img src="https://avatars0.githubusercontent.com/u/45407112?s=400&v=4">
-                  </a>
-                  <div class="content">
-                    <a class="author">Joe Henderson</a>
-                    <div class="metadata">
-                      <span class="date">5 days ago</span>
-                    </div>
-                    <div class="text">
-                      Dude, this is awesome. Thanks so much
-                    </div>
-                    <div class="actions">
-                      <a class="reply">Reply</a>
-                    </div>
-                  </div>
-                </div>
+                
+                
                 <form class="ui reply form">
                   <div class="field">
-                    <textarea></textarea>
+                    <input type="text" #texto>
                   </div>
-                  <div class="ui blue labeled submit icon button">
+                  <div class="ui blue labeled submit icon button" (click)="setComentario(texto.value)">
                     <i class="icon edit"></i> Add Reply
                   </div>
                 </form>
               </div>
 
-              <div class="ui card">
-                  <div class="extra content">
-                      <div class="ui two buttons">
-                        <div class="ui button">Favoritar</div>
-                        <div class="ui button">Decline</div>
-                      </div>
-                    </div>
-                  <div class="image">
-                      <img src="{{getRecomendado2()}}">  
-                  </div>
-                  <div class="content">
-                    <a class="header">Soraka</a>
-                    <div class="meta">
-                      <span class="date">Joined in 2013</span>
-                    </div>
-                    <div class="description">
-                      Kristy is an art director living in New York.
-                    </div>
-                  </div>
-                  <div class="extra content">
-                    <a>
-                      <i class="user icon"></i>
-                      22 Friends
-                    </a>
-                  </div>
-                </div>
             </div>
         </div>
       </div>
       
-      <button class="ui green button" (click)="passarRecomendado()">mudar</button>
-      <button class="ui red button" (click)="voltarRecomendado()">mudar</button>
       
-      <div class="row">
-      <div class="columm">
-        
-      </div>
-        
-      <div class="columm">
-        
-          </div>
-
-        </div>
-
-
         

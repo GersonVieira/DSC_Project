@@ -1,23 +1,26 @@
+import {User} from './user'
+
 export class Comentario{
-    constructor(
-        private idFilme:number,
-        private comentario: string,
-        private respostas: string[]){}
-    
-    getidFilme():number{
-        return this.idFilme;
+    nome:string;
+    imagemURL:string;
+    texto:string;
+    constructor( comentario: string, usuario:User){
+            this.nome=usuario.getNome();
+            this.imagemURL=usuario.getImagem();
+            this.texto=comentario;
     }
-    getComentario(): string{
-        return this.comentario;
+    getTexto(): string{
+        return this.texto;
     }
-    setComentario(comentarioEditado: string){
-        this.comentario=comentarioEditado;
+    getNome():string{
+        return this.texto;
     }
-    getResposta(): string[]{
-        return this.respostas;
+    getData():string{
+        return "ontem"
     }
-    addResposta(novaResposta: string){
-        this.respostas.push(novaResposta);
+
+    getImagem():string{
+        return this.imagemURL;
     }
 
 }

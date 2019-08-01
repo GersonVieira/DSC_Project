@@ -1,34 +1,27 @@
 import { Injectable } from "@angular/core";
 import { Comentario } from '../models/comentario';
+import { Comentarios } from '../models/comentarios';
+import { User } from '../models/user';
+import { ComentariosFilmes } from '../models/comentariosFilme';
 
 @Injectable()
 export class ComentariosService {
-    
-    comentarios: Comentario[] = [
-        new Comentario(1,"Otimo filme",["Sim, muito bom", "Concordo com vc, otimo atores"])
-    ];
-
-    comentariosDoFilme: Comentario[];
-    getComentario(idFilme:number): Comentario[]{
+    asd:number[]
+    comentarios:Array<ComentariosFilmes>;
+    constructor(){
+        this.comentarios=new Array<ComentariosFilmes>();
+        this.comentarios.push(new ComentariosFilmes(0));
+        this.comentarios.push(new ComentariosFilmes(1));
+        this.comentarios.push(new ComentariosFilmes(2));
+        this.comentarios.push(new ComentariosFilmes(3));
+        this.comentarios.push(new ComentariosFilmes(4));
+        this.comentarios.push(new ComentariosFilmes(5));
+        this.comentarios.push(new ComentariosFilmes(6));
+        this.comentarios.push(new ComentariosFilmes(7));
+        this.comentarios.push(new ComentariosFilmes(8));
         
-        let array = this.comentarios;
-        for (let item of array){
-            if(item.getidFilme() == idFilme){
-                this.comentariosDoFilme.push(item);
-            }
-        }
-        return this.comentariosDoFilme;
     }
-    addComentarioNoFilme(idFilme: number, comentarioNovo: string){
-        this.comentarios.push(new Comentario(idFilme,comentarioNovo,[]);
-    }
-    addRespostaDoComentario(idFilme: number, respostaNova: string){
-
-        let array = this.comentarios;
-        for (let item of array){
-            if(item.getidFilme() == idFilme){
-                item.addResposta(respostaNova);
-            }
-        }
+    getComentarios(idFilme:number):Array<Comentarios>{
+        return this.comentarios[idFilme].getComentariosFilme();
     }
 }

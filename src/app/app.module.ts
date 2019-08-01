@@ -21,10 +21,11 @@ import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MenuComponent } from './menu/menu.component';
-import { FilmesService} from './services/filmes.service'
+import { FilmesService} from './services/filmes.service';
 import { UsuariosService } from './services/usuarios.service';
 import { SeguidoresComponent } from './seguidores/seguidores.component';
 import { CategoriaService } from './services/categoria.service';
+import { ComentariosService } from './services/comentarios.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { CategoriaService } from './services/categoria.service';
     routing,
     FormsModule
   ],
-  providers: [FilmesService,UsuariosService,CategoriaService],
+  providers: [FilmesService,UsuariosService,CategoriaService,ComentariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
