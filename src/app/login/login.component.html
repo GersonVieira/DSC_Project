@@ -4,14 +4,16 @@
 
     <div class="field">
       <label>Login</label>
-      <input type="email" name="login" placeholder="Login" [ngModel]="login">
+      <input #Loginn type="email" name="login" placeholder="Login" [ngModel]="login">
     </div>
     <div class="field">
       <label>Senha</label>
-      <input type="password" name="senha" placeholder="Senha" [ngModel]="senha">
+      <input #Senha type="password" name="senha" placeholder="Senha" [ngModel]="senha">
     </div>
 
-      <button class="ui button" type="submit">Entrar</button>
+    
+
+      <button class="ui button" type="submit" (click)="logar(Loginn.value,Senha.value)">Entrar</button>
       <button [routerLink]="['../cadastro']" class="ui button">Cadastre-se</button>
 
   </form>

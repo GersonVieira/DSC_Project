@@ -26,6 +26,7 @@ import { UsuariosService } from './services/usuarios.service';
 import { SeguidoresComponent } from './seguidores/seguidores.component';
 import { CategoriaService } from './services/categoria.service';
 import { ComentariosService } from './services/comentarios.service';
+import { AutenticadorService } from './services/autenticador.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { ComentariosService } from './services/comentarios.service';
     routing,
     FormsModule
   ],
-  providers: [FilmesService,UsuariosService,CategoriaService,ComentariosService],
+  providers: [FilmesService,UsuariosService,CategoriaService,ComentariosService,AutenticadorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

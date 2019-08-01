@@ -14,7 +14,7 @@ export class PerfilComponent implements OnInit {
   user:Usuario;
   favoritos:Filme[];
   constructor(protected service:UsuariosService, serviceF: FilmesService) {
-    this.user = service.getUsuario(1);
+    this.user = service.getUsuario(localStorage.getItem("username"));
     this.favoritos = serviceF.getFavoritos([1,2]);
   }
   ngOnInit() {
