@@ -33,5 +33,16 @@ export class CadastroComponent implements OnInit {
 
     return true;
   }
+  cadastrar(nome:string, login:string, senha:string,confirmar:string, imagem:string):boolean{
+    console.log(senha+" "+confirmar+" "+nome+" "+login+" "+imagem);
+    
+    if (senha==confirmar) {
+      console.log("cadastrou");
+      
+      return this.service.cadastrarUsuario(new Usuario(4,nome,login,senha,[],[],[],imagem));  
+    }
+    return false;
+    
+  }
 
 }

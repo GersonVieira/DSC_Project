@@ -1,12 +1,13 @@
 import { Comentario } from './comentario';
 import { User } from './user'
+import { Usuario } from './usuario';
 export class Comentarios{
     lista:Array<Comentario>;
     texto:string
     nome:string;
     imagemURL:string;
     asd:number[]
-    constructor(comentario:string,usuario:User){
+    constructor(comentario:string,usuario:Usuario){
         
         this.texto=comentario;
         this.nome=usuario.getNome();

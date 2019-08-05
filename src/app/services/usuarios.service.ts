@@ -18,6 +18,8 @@ export class UsuariosService{
             }
         }
         this.usuarios.push(usuario);
+        console.log("cadastrou mesmo"+" "+this.usuarios.length);
+        
         return true;
     }
 

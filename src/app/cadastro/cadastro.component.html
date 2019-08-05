@@ -5,35 +5,35 @@
     <h4 class="ui dividing header">Cadastro</h4>
     <div class="field">
       <label>login</label>
-      <input type="text" name="Nome" placeholder="Nome" [ngModel]="login">
+      <input #vLogin type="text" name="Nome" placeholder="Nome" [ngModel]="login">
     </div>
     <div class="field">
       <label>Nome</label>
       <div class="two fields">
         <div class="field">
-          <input type="text" name="Nome" placeholder="Nome" [ngModel]="nome">
+          <input #vNome type="text" name="Nome" placeholder="Nome" [ngModel]="nome">
         </div>
         <div class="field">
-          <input type="text" name="sobrenome" placeholder="Sobrenome" [ngModel]="sobrenome">
+          <input #vSobrenome type="text" name="sobrenome" placeholder="Sobrenome" [ngModel]="sobrenome">
         </div>
       </div>
     </div>
     <div class="field">
         <label>Url da imagem</label>
-        <input type="text" name="Nome" placeholder="Nome" [ngModel]="URLImagem">
+        <input #vImagem type="text" name="Nome" placeholder="Nome" [ngModel]="URLImagem">
       </div>
     <div class="field">
       <label>E-mail</label>
-      <input type="email" name="email" placeholder="E-mail" [ngModel]="email">
+      <input #vEmail type="email" name="email" placeholder="E-mail" [ngModel]="email">
     </div>
     <div class="field">
         <label>Senha</label>
-        <div class="two fields">
+        <div #vSenha class="two fields">
           <div class="field">
-            <input type="password" name="senha" placeholder="Senha" [ngModel]="senha">
+            <input #vSenha type="password" name="senha" placeholder="Senha" [ngModel]="senha">
           </div>
           <div class="field">
-            <input type="password" name="confirmasenha" placeholder="Confirmar senha" [ngModel]="confirmasenha">
+            <input #vConfirmarSenha type="password" name="confirmasenha" placeholder="Confirmar senha" [ngModel]="confirmasenha">
           </div>
         </div>
       </div>
@@ -44,6 +44,6 @@
         <p>Tenha certeza que todos os campos estão preenchidos de maneira correta.</p>
       </div>
     </ng-template>
-    <button class="ui button" onclick="validar()" type="submit">Cadastrar</button>
+    <button class="ui button" (click)="cadastrar(vNome.value,vLogin.value,vSenha.value,vConfirmarSenha.value,vImagem.value)" type="submit">Cadastrar</button>
   </form>
 </div>
