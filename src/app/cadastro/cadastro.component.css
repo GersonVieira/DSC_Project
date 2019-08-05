@@ -1,2 +1,5 @@
 
-.ui.main.text.container{margin-bottom: 1cm}
+.ui.main.text.container{
+    margin-top: 1cm;
+    margin-bottom: 1cm
+}

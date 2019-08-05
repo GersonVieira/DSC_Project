@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../services/usuarios.service';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class EditarPerfilComponent implements OnInit {
   mostrarMensagemSalvo:boolean
   imagem:string;
-  constructor() { 
+  constructor(private service:UsuariosService) { 
     this.mostrarMensagemSalvo=false;
+    localStorage.setItem("header","Editar Perfil")
     
   }
   printar(valor:any):void{
@@ -25,12 +27,13 @@ export class EditarPerfilComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.imagem='https://avatars0.githubusercontent.com/u/45407112?s=400&v=4' 
+    this.imagem=this.service.getUsuario(localStorage.getItem("username")).getImagem(); 
   }
   isMostrarMensagem():boolean{
     return this.mostrarMensagemSalvo;
   }
   mostrarMensagem():void{
+    alert("fala tu");
     this.mostrarMensagemSalvo=true;
   }
   tirarMensagem():void{

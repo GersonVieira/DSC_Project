@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
-  constructor() { }
+  headerAtual:string
+  constructor() { 
+    
+  }
+  getStorage(){
+    return this.headerAtual=localStorage.getItem("header") 
+  }
 
   ngOnInit() {
   }

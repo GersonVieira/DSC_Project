@@ -4,6 +4,10 @@
   <form class="ui form">
     <h4 class="ui dividing header">Cadastro</h4>
     <div class="field">
+      <label>login</label>
+      <input type="text" name="Nome" placeholder="Nome" [ngModel]="login">
+    </div>
+    <div class="field">
       <label>Nome</label>
       <div class="two fields">
         <div class="field">
@@ -14,6 +18,10 @@
         </div>
       </div>
     </div>
+    <div class="field">
+        <label>Url da imagem</label>
+        <input type="text" name="Nome" placeholder="Nome" [ngModel]="URLImagem">
+      </div>
     <div class="field">
       <label>E-mail</label>
       <input type="email" name="email" placeholder="E-mail" [ngModel]="email">

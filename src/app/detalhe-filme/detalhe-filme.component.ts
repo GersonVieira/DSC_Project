@@ -20,6 +20,11 @@ export class DetalheFilmeComponent implements OnInit {
         this.id=router.snapshot.params['id'];
         this.setIndex();
         this.filme=this.getFilme();
+        this.setStorage()
+        
+   }
+   setStorage(){
+    localStorage.setItem("header","Detalhe Filme")
    }
   setIndex():void{
     this.service.setIndex(Number(this.id));

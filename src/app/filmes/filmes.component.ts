@@ -11,6 +11,7 @@ export class FilmesComponent implements OnInit {
   filmes:Filme[];
   constructor(protected service: FilmesService) {
     this.filmes = service.getFilmes();
+    localStorage.setItem("header","Filmes");
   }
   getFilmes(): Filme[]{
     return this.filmes;

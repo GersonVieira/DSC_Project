@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutenticadorService } from '../services/autenticador.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +10,15 @@ import { AutenticadorService } from '../services/autenticador.service';
 export class LoginComponent implements OnInit {
 
  
-  constructor(private service:AutenticadorService) {
-    
+  constructor(private router:Router, private service:AutenticadorService) {
+    localStorage.setItem("header","Login")
   }
   logar(login:string,senha:string):void{
     console.log("pegou"+login+senha); 
     this.service.login(login,senha);
+    if(this.isLoggedIn()){
+      this.router.navigate(['']);
+    }
     
     
   }
