@@ -1,0 +1,85 @@
+
+
+<div class="ui main text container">
+  <form class="ui form">
+    <h4 class="ui dividing header">Cadastro de Filme</h4>
+    <div class="field">
+      <label>Nome do Filme</label>
+      <input #vNome type="text" name="nome" placeholder="Nome" [ngModel]="login">
+    </div>
+    <div class="field">
+      <label>Url da imagem</label>
+      <input #vImagem type="text" name="url" placeholder="Url" [ngModel]="URLImagem">
+    </div>
+
+    <table border="2px">
+      <tr>
+        <td>
+          <div class="ui checkbox">
+            <label>Ação </label>
+            <input id="acao" type="checkbox" checked value="acao">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Animação </label>
+            <input type="checkbox" checked="" name="animacao">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Aventura </label>
+            <input type="checkbox" checked="" name="aventura">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Clássico </label>
+            <input type="checkbox" checked="" name="classico">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Comédia </label>
+            <input type="checkbox" checked="" name="comedia">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="ui checkbox">
+            <label>Drama </label>
+            <input type="checkbox" checked="" name="drama">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Especiais </label>
+            <input type="checkbox" checked="" name="especiais">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Romance </label>
+            <input type="checkbox" checked="" name="romance">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Suspense </label>
+            <input type="checkbox" checked="" name="suspense">
+          </div>
+        </td>
+        <td>
+          <div class="ui checkbox">
+            <label>Terror </label>
+            <input type="checkbox" checked="" name="terror">
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </form>
+  <button class="ui button" (click)="cadastrar(vNome.value,vImagem.value)" type="submit">Cadastrar</button>
+</div>

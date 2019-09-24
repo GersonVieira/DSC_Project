@@ -9,6 +9,7 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
 import { SeguidoresComponent } from './seguidores/seguidores.component';
+import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
 
 const APP_ROUTE: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +19,8 @@ const APP_ROUTE: Routes = [
   { path: 'perfil', component: PerfilComponent},
   { path: 'perfil/editar', component: EditarPerfilComponent},
   { path: 'detalhefilm/:id', component: DetalheFilmeComponent},
-  { path: 'seguidores', component: SeguidoresComponent}
+  { path: 'seguidores', component: SeguidoresComponent},
+  { path: 'cadastro-filme', component: CadastroFilmeComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTE);

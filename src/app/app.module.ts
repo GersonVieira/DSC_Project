@@ -27,6 +27,7 @@ import { SeguidoresComponent } from './seguidores/seguidores.component';
 import { CategoriaService } from './services/categoria.service';
 import { ComentariosService } from './services/comentarios.service';
 import { AutenticadorService } from './services/autenticador.service';
+import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AutenticadorService } from './services/autenticador.service';
     CategoriaComponent,
     CabecalhoComponent,
     MenuComponent,
-    SeguidoresComponent
+    SeguidoresComponent,
+    CadastroFilmeComponent
   ],
   imports: [
     BrowserModule,

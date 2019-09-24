@@ -37,13 +37,7 @@
           </div>
         </div>
       </div>
-    <ng-template [ngIf] = "valido()">
-      <div class="ui negative message">
-        <i class="close icon"></i>
-        <div class="header">Erro</div>
-        <p>Tenha certeza que todos os campos estão preenchidos de maneira correta.</p>
-      </div>
-    </ng-template>
+
     <button class="ui button" (click)="cadastrar(vNome.value,vLogin.value,vSenha.value,vConfirmarSenha.value,vImagem.value)" type="submit">Cadastrar</button>
   </form>
 </div>

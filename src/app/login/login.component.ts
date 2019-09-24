@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
- 
+
   constructor(private router:Router, private service:AutenticadorService) {
     localStorage.setItem("header","Login")
   }
   logar(login:string,senha:string):void{
-    console.log("pegou"+login+senha); 
+    console.log("pegou"+login+senha);
     this.service.login(login,senha);
     if(this.isLoggedIn()){
       this.router.navigate(['']);
     }
-    
-    
+
+
   }
   isLoggedIn():boolean{
     return this.service.isLoggedIn();
