@@ -10,8 +10,8 @@ export class Comentarios{
     constructor(comentario:string,usuario:Usuario){
         
         this.texto=comentario;
-        this.nome=usuario.nome;
-        this.imagemURL=usuario.imagem;
+        this.nome=usuario.getNome();
+        this.imagemURL=usuario.getImagem();
         this.lista=new Array<Comentario>();
         }
     getTexto():string{

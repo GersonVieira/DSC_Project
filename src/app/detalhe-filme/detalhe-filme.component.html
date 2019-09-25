@@ -1,78 +1,77 @@
 <div class="ui container">
-  <div class="row">
-      <div class="column">
-          <div class="ui card">
-              <div class="extra content">
-                  <div class="ui two buttons">
-                    <div class="ui button">Favoritar</div>
-                    <div class="ui button">Decline</div>
+    <div class="row">
+        <div class="column">
+            <div class="ui card">
+                <div class="extra content">
+                    <div class="ui two buttons">
+                      <div class="ui button">Favoritar</div>
+                      <div class="ui button">Decline</div>
+                    </div>
                   </div>
+                <div class="image">
+                    <img src="{{getImagemFilme()}}">
                 </div>
-              <div class="image">
-                  <img src="{{getImagemFilme()}}">  
-              </div>
-              <div class="content">
-                <a class="header">{{getNomeFilme()}}</a>
-              </div>
-              
-            </div>
-
-      </div>
-      <div class="column">
-          <div class="ui comments">
-              <h3 class="ui dividing header">Comments</h3>
-              <div *ngFor="let comentario of getComentarios()" class="comment">
-                <a class="avatar">
-                  <img src={{comentario.getImagem()}}>
-                </a>
                 <div class="content">
-                  <a class="author">{{comentario.getNome()}}</a>
-                  <div class="metadata">
-                    <span class="date">{{comentario.getHora()}}</span>
-                  </div>
-                  <div class="text">
-                    {{comentario.getTexto()}}
-                  </div>
-                  
+                  <a class="header">{{getNomeFilme()}}</a>
                 </div>
-                <div class="comments">
-                    <div *ngFor="let resposta of comentario.getComentarios()" class="comment">
-                      <a class="avatar">
-                        <img src={{resposta.getImagem()}}>
-                      </a>
-                      <div class="content">
-                        <a class="author">{{resposta.getNome()}}</a>
-                        <div class="metadata">
-                          <span class="date">{{resposta.getData()}}</span>
-                        </div>
-                        <div class="text">
-                          {{resposta.getTexto()}}
-                        </div>
-                        <div class="actions">
-                          <a class="submit">Reply</a>
+
+              </div>
+
+        </div>
+        <div class="column">
+            <div class="ui comments">
+                <h3 class="ui dividing header">Comments</h3>
+                <div *ngFor="let comentario of getComentarios()" class="comment">
+                  <a class="avatar">
+                    <img src={{comentario.getImagem()}}>
+                  </a>
+                  <div class="content">
+                    <a class="author">{{comentario.getNome()}}</a>
+                    <div class="metadata">
+                      <span class="date">{{comentario.getHora()}}</span>
+                    </div>
+                    <div class="text">
+                      {{comentario.getTexto()}}
+                    </div>
+                    <div class="actions">
+                      <a class="reply">Reply</a>
+                    </div>
+                  </div>
+                  <div class="comments">
+                      <div *ngFor="let resposta of comentario.getComentarios()" class="comment">
+                        <a class="avatar">
+                          <img src={{resposta.getImagem()}}>
+                        </a>
+                        <div class="content">
+                          <a class="author">{{resposta.getNome()}}</a>
+                          <div class="metadata">
+                            <span class="date">{{resposta.getData()}}</span>
+                          </div>
+                          <div class="text">
+                            {{resposta.getTexto()}}
+                          </div>
+                          <div class="actions">
+                            <a class="reply">Reply</a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    
-                  </div>
-              </div>
-              
-              
-              <form class="ui reply form">
-                <div *ngIf="isLoggedIn()">
-                <div class="field" >
-                  <input type="text" [(value)]="comentario" (input)="comentario = $event.target.value" onfocus="this.value='';"/>
-                  
-                </div>
-                <input type="submit" value="Publicar" class="ui blue button" (click)="setComentario()"/>
-              </div>
-                
-              </form>
-            </div>
 
-          </div>
+                    </div>
+                </div>
+
+
+                <form class="ui reply form">
+                  <div class="field">
+                    <input type="text" #texto>
+                  </div>
+                  <div class="ui blue labeled submit icon button" (click)="setComentario(texto.value)">
+                    <i class="icon edit"></i> Add Reply
+                  </div>
+                </form>
+              </div>
+
+            </div>
+        </div>
       </div>
-    </div>
-    
-    
-      
+
+

@@ -1,8 +1,8 @@
 <div class="container">
 <div class="item ui stackable two column grid">
   <div class="column">
-  <img class="ui small avatar image" src={{user.imagem}}>
-    <h1 style="color: black">{{user.nome}}
+  <img class="ui small avatar image" src={{user.getImagem()}}>
+    <h1 style="color: white">{{user.getNome()}}
     <p></p>
     <button class="ui tiny button" routerLink="editar">Editar Perfil</button>
     <button [routerLink]="['../seguidores']" class="ui tiny button">Seguidores</button></h1>

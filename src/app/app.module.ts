@@ -28,7 +28,6 @@ import { CategoriaService } from './services/categoria.service';
 import { ComentariosService } from './services/comentarios.service';
 import { AutenticadorService } from './services/autenticador.service';
 import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,8 +55,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     routing,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
   providers: [FilmesService,UsuariosService,CategoriaService,ComentariosService,AutenticadorService],
   bootstrap: [AppComponent]

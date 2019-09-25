@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FilmesService } from './services/filmes.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,4 @@ import { FilmesService } from './services/filmes.service';
 })
 export class AppComponent {
   title = 'Projeto DSC';
-  constructor(private serviceFilmes:FilmesService){
-      this.serviceFilmes.getAll()
-  }
 }

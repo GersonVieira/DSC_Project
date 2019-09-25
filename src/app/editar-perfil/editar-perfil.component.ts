@@ -25,11 +25,6 @@ export class EditarPerfilComponent implements OnInit {
   getImage():string{
     return this.imagem;
   }
-  salvar(imagem:string,nome:string,email:string){
-      this.service.getUsuariologado().nome=nome;
-      this.service.getUsuariologado().imagem=imagem;
-      this.service.cadastrarUsuario(this.service.getUsuariologado());
-  }
 
   ngOnInit() {
     this.imagem=this.service.getUsuario(localStorage.getItem("username")).getImagem(); 
