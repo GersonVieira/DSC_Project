@@ -1,23 +1,39 @@
 import { Categoria } from '../models/categoria';
 
 export class Filme {
-    constructor(private nome: string,private sinopse: string, private categorias:Categoria[],private imagem: string, private id: number ){
-        
+     id: number;
+     nome: string;
+     sinopse: string;
+     categorias:string;
+     imagem: string;
+    setId(id:number){
+        this.id=id;
     }
-
-    public getNome(): string{
+    setNome(nome:string){
+        this.nome=nome;
+    }
+    setSinopse(sinopse:string){
+        this.sinopse=sinopse;
+    }
+    setCategorias(categorias:string){
+        this.categorias=categorias;
+    }
+    setImagem(imagem:string){
+    this.imagem=imagem;
+    }
+    getNome(): string{
         return this.nome;
     }
-    public getId(): number{
+    getId(): number{
         return this.id;
     }
-    public getImagem(): string{
+    getImagem(): string{
         return this.imagem;
     }
-    public getSinopse(): string{
+    getSinopse(): string{
         return this.sinopse;
     }
-    public getCategorias(): Categoria[]{
+    getCategorias(): string{
         return this.categorias;
     }
 }

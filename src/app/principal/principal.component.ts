@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private filmeService:FilmesService) {
+    this.filmeService.getAll()
+   }
 
   ngOnInit() {
   }

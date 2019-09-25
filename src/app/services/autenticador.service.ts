@@ -15,20 +15,22 @@ export class AutenticadorService {
   logout(): any { localStorage.removeItem('username'); }
   getUser(): any {  return localStorage.getItem('username'); }
   isLoggedIn(): boolean { return this.getUser() !== null; }
+  
   verificarUsuario(service :UsuariosService,login:string,senha:string):boolean{
-    console.log(service.usuarios.length);
+    service.recuperarUsuarios();
+    
     
     for(let usuario of service.usuarios){
-      if (usuario.getLogin()==login) {
-        if(usuario.getSenha()==senha){
-          console.log("verificou");
-          
+      if (usuario.login==login) {
+        if(usuario.senha==senha){
+         
+          this.service.setUsuarioLogado(usuario);
           return true;
         }
         return false;
       }
     }
-    console.log("bao");
+    
     
     return false;
   }

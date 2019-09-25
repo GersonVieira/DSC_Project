@@ -5,8 +5,8 @@ export class Comentario{
     imagemURL:string;
     texto:string;
     constructor( comentario: string, usuario:User){
-            this.nome=usuario.getNome();
-            this.imagemURL=usuario.getImagem();
+            this.nome=usuario.nome;
+            this.imagemURL=usuario.imagemURL;
             this.texto=comentario;
     }
     getTexto(): string{
