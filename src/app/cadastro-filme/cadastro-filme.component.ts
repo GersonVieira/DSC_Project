@@ -18,6 +18,7 @@ export class CadastroFilmeComponent implements OnInit {
   }
   cadastrar(nome:string,imagem:string,categoria:string):void{
     this.serviceFilmes.adicionarFilme(nome,imagem,categoria);
+    this.router.navigate(['']);
   }
 
 }

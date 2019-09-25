@@ -63,14 +63,14 @@ export class FilmesService {
         return array;
     }
     constructor(private http:HttpClient){
-
+        
     }
     url='http://localhost:8080/filmes'; 
     getTestbd(){
         return this.http.get<Test[]>(this.url);
     }
     getAll(){
-        this.http.get('http://localhost:8080/filmes').subscribe(data=>
+        this.http.get(this.url).subscribe(data=>
         this.filmes=<Filme[]>data);
     }
     test:Test=new Test();
@@ -100,12 +100,5 @@ export class FilmesService {
         this.http.post(this.url,this.filme).subscribe();
         
     }
-    adicionarTeste2():Observable<any>{
-        
-        this.test.id=1; 
-        this.test.nome="1asda4864";
-        
-        return this.http.delete('http://localhost:8080/filmes/2');
-        
-    }
+    
 }
