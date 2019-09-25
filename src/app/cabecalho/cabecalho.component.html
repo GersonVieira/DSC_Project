@@ -6,5 +6,6 @@
     </div>
     <a [routerLink]="['']" class="item">Home</a>
     <a *ngIf="!isLoggedIn()" [routerLink]="['login']" class="item">Sign-in</a>
-    <a *ngIf="isLoggedIn()" (click)="logOut()" class="item">Sign-out</a>
+    <a *ngIf="isLoggedIn()" [routerLink]="['cadastro-filme']" class="item">Cadastrar Filme</a>
+    <a *ngIf="isLoggedIn()" [routerLink]="['']" (click)="logOut()" class="item">Sign-out</a>
 </div>
