@@ -1,39 +1,25 @@
 
 export class Usuario{
-    constructor(
-        private idUsuario: number,
-        private nome: string,
-        private login: string,
-        private senha: string,
-        private favoritos: number[],
-        private idSeguidores: number[],
-        private idSeguindo: number[],
-        private imagem: string){}
+    idUsuario: number;
+    nome: string;
+    login: string;
+    senha: string;
+    imagem: string;
+    constructor(idUsuario: number, nome: string,login: string,senha: string,imagem: string){
+             this.idUsuario=idUsuario;
+             this.imagem=imagem;
+             this.login=login;
+             this.senha=senha;
+             this.nome=nome;
+         }
 
     getIdUsuario(): number{
         return this.idUsuario;
     }
-    getIdSeguindo(): number[]{
-        return this.idSeguindo;
-    }
-    addSeguindo(idUsuario: number){
-        this.idSeguindo.push(idUsuario);
-    }
-    deixarDeSeguir(idUsuario: number){
-        let array = this.idSeguindo;
-        for (let item of array){
-            if(item == idUsuario){
-                this.idSeguindo.splice(item, 1);
-                break;
-            }
-        }
-    }
-    getIdSeguidores(): number[]{
-        return this.idSeguidores;
-    }
-    addSeguidor(idUsuario: number){
-        this.idSeguidores.push(idUsuario);
-    }
+    
+   
+    
+    
     getNome(): string{
         return this.nome;
     }
@@ -52,21 +38,7 @@ export class Usuario{
     setSenha(novaSenha: string){
         this.senha = novaSenha;
     }
-    getFavoritos(): number[]{
-        return this.favoritos;
-    }
-    addFavorito(idFilme: number){
-        this.favoritos.push(idFilme);
-    }
-    removerFavorito(idFilme: number){
-        let array = this.favoritos;
-        for (let item of array){
-            if(item == idFilme){
-                this.favoritos.splice(item, 1);
-                break;
-            }
-        }
-    }
+    
     getImagem(): string{
         return this.imagem;
     }

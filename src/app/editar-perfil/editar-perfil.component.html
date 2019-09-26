@@ -19,20 +19,13 @@
     <div class="ui form">
         <div class="two fields">
                 <div class="field">
-                        <input type="text" placeholder="Nome" maxlength="15">
+                        <input #vNome type="text" placeholder="Nome" maxlength="15">
                 </div>
                 <div class="field">
                         <input type="text" placeholder="Sobrenome" maxlength="20">
                 </div>
         </div>
-        <div class="ui inverted divider"></div>
-        <div>
-                <input type="text" placeholder="Descrição" maxlength="60">
-           </div>
-        <div class="ui inverted divider"></div>
-        <div>
-             <input type="text" placeholder="E-mail">
-        </div>
+        
         <div class="ui inverted divider"></div>
         <div class="ui positive message" *ngIf='isMostrarMensagem()==true'>
                 <i class="close icon" (click)='tirarMensagem()'></i>
@@ -40,7 +33,7 @@
                   Informações salvas com sucesso
                 </div>
               </div>
-        <button class="ui button" (click)='mostrarMensagem()'>Salvar</button>
+        <button class="ui button" (click)='salvar(valor.value, vNome.value)'>Salvar</button>
     </div>
 </div>
 
