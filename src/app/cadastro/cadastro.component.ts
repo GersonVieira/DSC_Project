@@ -23,7 +23,7 @@ export class CadastroComponent implements OnInit {
 
   validarlogin(login:string,nome:string,sobrenome:string,imagemURL:string,email:string,senha:string,confirmarSenha:string):boolean{
     if(senha==confirmarSenha){
-      return this.service.cadastrarUsuario(new Usuario(4,nome+" "+sobrenome,login,senha,[],[],[],imagemURL));
+      return this.service.cadastrarUsuario(new Usuario(4,nome+" "+sobrenome,login,senha,imagemURL));
     }
     return false;
 
@@ -34,14 +34,10 @@ export class CadastroComponent implements OnInit {
     return true;
   }
   cadastrar(nome:string, login:string, senha:string,confirmar:string, imagem:string):boolean{
-    console.log(senha+" "+confirmar+" "+nome+" "+login+" "+imagem);
     
-    if (senha==confirmar) {
-      console.log("cadastrou");
-      
-      return this.service.cadastrarUsuario(new Usuario(4,nome,login,senha,[],[],[],imagem));  
-    }
-    return false;
+    
+      return this.service.cadastrarUsuario(new Usuario(null,nome,login,senha,imagem));  
+    
     
   }
 
