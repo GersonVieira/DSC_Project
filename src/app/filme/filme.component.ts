@@ -21,5 +21,18 @@ export class FilmeComponent implements OnInit {
   }
   ngOnInit() {
   }
+  index:number
+  getId():number{
+    this.index=0;
+    for(let x of this.service.getFilmes()){
+      if(this.filme.id==x.id){
+        
+        break
+      }else this.index++;
+      this.setIndex(this.index);
+     
+    }
+    return this.index;
+  }
 
 }
